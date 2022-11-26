@@ -1,12 +1,8 @@
 import { Flex, Image, Text } from "@chakra-ui/react";
-import { CharacterCardProps } from "../../../types/character";
+import { CharacterProps } from "../../../types/character";
 import { useNavigation } from "../../../hooks/useNavigation";
 
-export function CharacterCard({
-  character,
-}: {
-  character: CharacterCardProps;
-}) {
+export function CharacterCard({ character }: { character: CharacterProps }) {
   const { handleNavigation } = useNavigation(character.id);
 
   return (

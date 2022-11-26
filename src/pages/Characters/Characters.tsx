@@ -2,12 +2,15 @@ import { Grid } from "@chakra-ui/react";
 
 import { CharacterProps } from "../../types/character";
 import { CharacterCard } from "./components/CharacterCard";
-import { useGetCharacters } from "./hooks/useGetCharacters";
 import { Error, Loading } from "../../components";
 import { Pagination } from "./components/Pagination";
+import { useFetchData } from "../../hooks/useFetchData";
 
 export function Characters() {
-  const { isLoading, isError, data, setURL } = useGetCharacters();
+  const { isLoading, isError, data, setURL } = useFetchData({
+    queryKey: "characters",
+    url: "https://rickandmortyapi.com/api/character",
+  });
 
   if (isLoading) return <Loading />;
   if (isError) return <Error />;
