@@ -3,9 +3,19 @@ import { Link as ReactLink } from "react-router-dom";
 
 export const Navbar = () => {
   return (
-    <Flex>
-      <Link color="blue.500" fontWeight="bold" as={ReactLink} to="/characters">
-        CHARACTERS
+    <Flex
+      justify="space-around"
+      height="50px"
+      background="blue.400"
+      color="whiteAlpha.900"
+      fontSize="2xl"
+      fontWeight="bold"
+    >
+      <Link as={ReactLink} to="/">
+        Home
+      </Link>
+      <Link as={ReactLink} to="/characters">
+        Characters
       </Link>
     </Flex>
   );
