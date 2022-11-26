@@ -12,16 +12,10 @@ export const useGetCharacters = () => {
     }
   );
 
-  const onChangePage = (isNextPage: boolean) => {
-    if (isNextPage && data?.info?.next) {
-      setURL(data?.info?.next);
-    } else if (!isNextPage && data?.info?.prev) setURL(data?.info?.prev);
-  };
-
   return {
     data,
     isError,
     isLoading,
-    onChangePage,
+    setURL,
   };
 };

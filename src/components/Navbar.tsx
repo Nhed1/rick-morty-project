@@ -5,6 +5,7 @@ export const Navbar = () => {
   return (
     <Flex
       justify="space-around"
+      align="center"
       height="50px"
       background="blue.400"
       color="whiteAlpha.900"
