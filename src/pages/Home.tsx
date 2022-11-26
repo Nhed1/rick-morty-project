@@ -1,13 +1,14 @@
-import { Box, Text, Link } from "@chakra-ui/react";
-import { Link as ReactLink } from "react-router-dom";
+import { Grid, Text } from "@chakra-ui/react";
 
 export function Home() {
   return (
-    <Box>
-      <Text fontSize="x-large">Welcome to Rick and Morty Project</Text>
-      <Link color="blue.500" fontWeight="bold" as={ReactLink} to="/characters">
-        CHARACTERS
-      </Link>
-    </Box>
+    <Grid placeItems="center" width="100%" height="calc(100vh - 50px)">
+      <Text fontSize="5xl" fontWeight="300" color="blue.500" display="flex">
+        Welcome to the{" "}
+        <Text ml={3} color="orange.500">
+          Rick and Morty Project
+        </Text>
+      </Text>
+    </Grid>
   );
 }
