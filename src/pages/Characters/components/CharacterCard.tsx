@@ -1,5 +1,5 @@
 import { Flex, Image, Text } from "@chakra-ui/react";
-import { CharacterCardProps } from "../types/character";
+import { CharacterCardProps } from "../../../types/character";
 import { useNavigation } from "../../../hooks/useNavigation";
 
 export function CharacterCard({

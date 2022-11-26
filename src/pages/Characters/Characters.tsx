@@ -1,9 +1,9 @@
 import { Grid } from "@chakra-ui/react";
 
-import { CharacterCardProps } from "./types/character";
+import { CharacterProps } from "../../types/character";
 import { CharacterCard } from "./components/CharacterCard";
 import { useGetCharacters } from "./hooks/useGetCharacters";
-import { Error, Loading } from "../LoadingAndError";
+import { Error, Loading } from "../../components";
 import { Pagination } from "./components/Pagination";
 
 export function Characters() {
@@ -22,8 +22,8 @@ export function Characters() {
         placeItems="center"
         p="30px"
       >
-        {characters.map((character: CharacterCardProps) => (
-          <CharacterCard character={character} />
+        {characters.map((character: CharacterProps) => (
+          <CharacterCard character={character} key={character.id} />
         ))}
       </Grid>
 
