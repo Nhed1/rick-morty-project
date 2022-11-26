@@ -1,11 +1,14 @@
 import { Flex, Image, Text } from "@chakra-ui/react";
 import { CharacterCardProps } from "../types/character";
+import { useNavigation } from "../../../hooks/useNavigation";
 
 export function CharacterCard({
   character,
 }: {
   character: CharacterCardProps;
 }) {
+  const { handleNavigation } = useNavigation(character.id);
+
   return (
     <Flex
       border="1px black solid"
@@ -15,6 +18,8 @@ export function CharacterCard({
       alignItems="center"
       justifyItems="center"
       flexDirection="column"
+      cursor="pointer"
+      onClick={handleNavigation}
     >
       <Image src={character.image} alt={character.name} w="140px" />
       <Text fontSize="large">

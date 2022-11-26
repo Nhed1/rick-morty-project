@@ -1,4 +1,4 @@
-import { Button, Flex, Grid, Spinner } from "@chakra-ui/react";
+import { Grid } from "@chakra-ui/react";
 
 import { CharacterCardProps } from "./types/character";
 import { CharacterCard } from "./components/CharacterCard";
